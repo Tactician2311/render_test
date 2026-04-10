@@ -1,4 +1,3 @@
-import { API } from './config.js'
 /**
  * src/config.js
  * -------------

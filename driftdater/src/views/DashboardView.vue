@@ -1,4 +1,4 @@
-import { API } from './config.js'
+import { API } from '../config.js'
 <script setup>
 /*
  * DashboardView — Discover page (Browse Potential Matches).
