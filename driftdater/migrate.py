@@ -1,25 +1,23 @@
-"""
-migrate.py
-----------
-Run by build.sh on Render.
-Handles first-time migration init and all subsequent upgrades safely.
-"""
 import os
 import subprocess
 import sys
 
-def run(cmd):
+def run(cmd, check=True):
     print(f"==> {cmd}")
     result = subprocess.run(cmd, shell=True)
-    if result.returncode != 0:
+    if check and result.returncode != 0:
         sys.exit(result.returncode)
+    return result.returncode
 
-# First-time setup: create migrations folder if it doesn't exist
 if not os.path.isdir("migrations"):
-    print("==> migrations/ not found — initialising...")
+    print("==> Initialising migrations folder...")
     run("flask --app app db init")
-    run("flask --app app db migrate -m 'initial schema'")
 
-# Always run upgrade (applies pending migrations, no-op if already up to date)
+print("==> Generating migration from models...")
+run("flask --app app db migrate -m 'schema'", check=False)
+
+print("==> Applying migrations...")
+run("flask --app app db stamp head", check=False)
 run("flask --app app db upgrade")
+
 print("==> Database ready.")
