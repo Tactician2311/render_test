@@ -1,5 +1,5 @@
-import { API } from '../config.js'
 <script setup>
+import { API } from '../config.js'
 /*
  * SettingsView — Application settings.
  * Section 1: Dark Mode toggle (Optional Feature 2) — calls theme.toggle().

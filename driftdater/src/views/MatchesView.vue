@@ -1,5 +1,5 @@
-import { API } from '../config.js'
 <script setup>
+import { API } from '../config.js'
 /*
  * MatchesView — Mutual matches list.
  * Fetches GET /api/v1/matches. Each match shows score, bio, interests,

@@ -1,5 +1,5 @@
-import { API } from '../config.js'
 <script setup>
+import { API } from '../config.js'
 /*
  * DashboardView — Discover page (Browse Potential Matches).
  * Shows unswiped profiles with filtering by age, location, interest, and sort.

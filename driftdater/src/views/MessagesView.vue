@@ -1,5 +1,5 @@
-import { API } from '../config.js'
 <script setup>
+import { API } from '../config.js'
 /*
  * MessagesView — Conversation inbox.
  * Fetches GET /api/v1/conversations. Shows avatar, name, last message,

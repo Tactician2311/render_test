@@ -1,5 +1,5 @@
-import { API } from '../config.js'
 <script setup>
+import { API } from '../config.js'
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import axios from 'axios'

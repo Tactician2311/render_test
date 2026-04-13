@@ -1,8 +1,8 @@
-import { API } from '../config.js'
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import axios from 'axios'
 import { useAuthStore } from '../stores/auth'
+import { API } from '../config.js'
 
 const auth = useAuthStore()
 const editing = ref(false)

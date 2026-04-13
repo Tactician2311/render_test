@@ -1,5 +1,5 @@
-import { API } from '../config.js'
 <script setup>
+import { API } from '../config.js'
 /*
  * ConversationView — Individual chat thread.
  * Polls GET /api/v1/messages/:id every 4 seconds for near-real-time updates.

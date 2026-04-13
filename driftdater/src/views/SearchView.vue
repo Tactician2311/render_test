@@ -1,5 +1,5 @@
-import { API } from '../config.js'
 <script setup>
+import { API } from '../config.js'
 /*
  * SearchView — Search and discover profiles.
  * Debounced (400ms) input queries GET /api/v1/search?q=. Each result

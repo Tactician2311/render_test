@@ -1,5 +1,5 @@
-import { API } from '../config.js'
 <script setup>
+import { API } from '../config.js'
 /*
  * FavoritesView — Bookmarked profiles grid.
  * GET /api/v1/favorites. Each card has Like (swipe), Remove (DELETE favorite),
