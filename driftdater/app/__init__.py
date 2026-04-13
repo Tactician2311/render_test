@@ -56,7 +56,11 @@ def create_app():
         "http://localhost:5173",
         os.environ.get("RENDER_FRONTEND_URL", ""),
     ]
-    CORS(flask_app, supports_credentials=False, origins=[o for o in frontend_origins if o])
+    CORS(flask_app,
+         supports_credentials=True,
+         origins=[o for o in frontend_origins if o],
+         allow_headers=["Content-Type", "Authorization"],
+         methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
 
     # Import models inside the factory so Flask-Migrate can detect all tables
     from app import models  # noqa: F401
